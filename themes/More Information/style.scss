@@ -1,0 +1,77 @@
+
+/* 
+  This is the details pane for tables that can be accessed by
+  double-clicking a table item.  E.g., double-clicking a download
+  in the downloads table.
+*/
+.table-details-pane 
+{
+  /*
+    Docks the details pane so it doesn't cover any data. The pane
+    will get lost if there are too many columns enabled and the 
+    Vortex window is too small.
+  */
+  position: static !important;
+  min-width: 400px !important;
+
+  /*
+    Makes it so you can't close the details pane
+  */
+  &.closed 
+  {
+    max-width: 50%;
+    border: 1px solid $border-color;
+    border-right-width: 0;
+    box-shadow: -2px 0px 4px 1px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/*
+  Hides the button for the details pane as it can't be closed
+*/
+button#btn-minimize-menu.btn-menu-minimize 
+{
+  display: none;
+}
+
+/* 
+  Makes these dashlets take up 100% of the width (3 slots)
+*/
+.packery-item#Starter 
+{
+  width: 100% !important;
+}
+
+/*
+  Makes these dashlets take up 100% of the width (3 slots)
+  and be 480px high (4 slots)
+*/
+.packery-item#Latest\ Mods 
+{
+  width: 100% !important;
+  height: 480px !important;
+}
+
+/*
+  Makes these dashlets take up 50% of the width (1.5 slots)
+  and be 480px high (4 slots)
+*/
+.packery-item#Changelog, 
+.packery-item#Issues,
+.packery-item#News,
+.packery-item#Announcements 
+{
+  width: 50% !important;
+  height: 480px !important;
+}
+
+/* 
+  Makes tables more compact by removing excess padding
+*/
+.xtable > .xtbody > .xtr > .xtd
+{
+  padding: unset;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: .75rem;
+}
